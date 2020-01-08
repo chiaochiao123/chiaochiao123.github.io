@@ -1,0 +1,24 @@
+{
+  "name": "chiaochiao",
+  "version": "1.0.0",
+  "description": "no",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiaochiao123/chiaochiao123.github.io.git"
+  },
+  "author": "by LizWang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chiaochiao123/chiaochiao123.github.io/issues"
+  },
+  "homepage": "https://github.com/chiaochiao123/chiaochiao123.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "gulp": "^4.0.2",
+    "pug": "^2.0.4"
+  }
+}
