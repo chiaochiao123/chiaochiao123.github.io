@@ -17,14 +17,6 @@ gulp.task('pug', function () {
   // var YOUR_LOCALS = {};
   gulp.src('./source/*.pug')
     .pipe($.plumber())
-    // .pipe($.data(function () {
-    //   var property = require('./source/data/db.json');
-    //   var source = {
-    //     'propertyData': property,
-    //   };
-    //   // console.log('pug',property.seminar[1].seminarImg);
-    //   return source;
-    // }))
     .pipe($.pug({
       pretty: true
     }))
