@@ -10,7 +10,7 @@ var $ = require('gulp-load-plugins')();
 
 gulp.task('copyHTML', function () {
   return gulp.src('./source/**/*.html')
-    .pipe(gulp.dest('./public/'))
+    .pipe(gulp.dest('./'))
 })
 
 gulp.task('pug', function () {
@@ -20,7 +20,7 @@ gulp.task('pug', function () {
     .pipe($.pug({
       pretty: true
     }))
-    .pipe(gulp.dest('./public'))
+    .pipe(gulp.dest('./'))
 });
 
 gulp.task('sass', function () {
