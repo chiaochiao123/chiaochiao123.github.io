@@ -19,6 +19,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "gulp": "^4.0.2",
+    "gulp-load-plugins": "^2.0.2",
     "pug": "^2.0.4"
   }
 }
