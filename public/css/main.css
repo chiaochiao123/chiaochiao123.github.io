@@ -7161,3 +7161,9 @@ header h1 a:focus {
 
 header .logo {
   width: 100px; }
+
+header .nav-link:hover {
+  color: #160A62 !important; }
+
+.index-img {
+  width: 200px; }

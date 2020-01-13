@@ -7,5 +7,6 @@ body{
   color: $dark;
 }
 //component
-@import './components/header'
+@import './components/header';
 //custom & partial
+@import './components/indexCustom'
