@@ -7153,8 +7153,11 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   color: #343a40; }
 
-.header h1 a,
-.header h1 a:hover,
-.header h1 a:focus {
+header h1 a,
+header h1 a:hover,
+header h1 a:focus {
   text-decoration: none;
   color: #343a40; }
+
+header .logo {
+  width: 100px; }

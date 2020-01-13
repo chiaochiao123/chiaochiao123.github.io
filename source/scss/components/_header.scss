@@ -1,4 +1,4 @@
-.header {
+header {
   h1 {
     a,
     a:hover,
@@ -6,5 +6,8 @@
       text-decoration: none;
       color: $dark;
     }
+  }
+  .logo{
+    width: 100px;
   }
 }
