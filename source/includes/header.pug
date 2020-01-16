@@ -1,23 +1,9 @@
-header
-  .container
-    .row.mt-4 
-      .col-md-6
-        h1.h3 
-          a(href="/") CHIAO
-            span.ml-4 CHIAO
-            br 
-            | ILLUSTRATION
-        img.logo.ml-3(src='/public/img/logo.gif', alt='Logo')
-      .col-md-6
-        img(src='http://unsplash.it/530/180?gravity=center',alt='banner')
-        ul.nav.justify-content-between
-          li.nav-item
-            a.text-dark.nav-link(href='/about.html') ABOUT ME
-          li.nav-item
-            a.text-dark.nav-link(href='#') PROJECT
-          li.nav-item
-            a.text-dark.nav-link(href='#') CONTACT
-          li.nav-item
-            a.text-dark.nav-link(href='#') BLOG
-          li.nav-item
-            a.text-dark.nav-link(href='#') INSTAGRAM
+.container
+  .row.mt-4 
+    .col-md-6
+      include ./title.pug
+      img.logo.ml-3(src='/public/img/logo.gif', alt='Logo')
+    .col-md-6
+      img.banner(src='/public/img/banner1.jpg',alt='banner')
+      include ./navs.pug
+
