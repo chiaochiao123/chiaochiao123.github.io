@@ -1,0 +1,10 @@
+mixin header2(title_1,title_2)
+  .container
+    .row.mt-4 
+      .col-md-6
+        include ./title.pug
+        h2= title_1
+        h2= title_2
+      .col-md-6
+        include ./navs.pug
+
