@@ -1,3 +1,6 @@
 .modal-body{
   padding: 0;
 }
+.modal-backdrop.show {
+  opacity: 0.8;
+}
