@@ -5,4 +5,16 @@ html(lang='ja')
     header
       include ./includes/header.pug
     include ./includes/indexContent.pug
-    include ./includes/footer.pug
+    footer
+      include ./includes/footer.pug
+    include ./includes/script.pug
+    // Optional JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js', integrity='sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map', integrity='undefined', crossorigin='anonymous')
+    script.
+      $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox({
+          showArrows: true,
+        });
+      });
