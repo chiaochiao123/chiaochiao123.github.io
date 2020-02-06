@@ -1,7 +1,8 @@
 .container
-  .row.mt-2
+  .row
     .col-sm-4.col-md-4.col-xl-6
-      img.logo.ml-3(src='/public/img/logo.gif', alt='Logo')
+      include ./logo.pug
+      img.logo-img.ml-3(src='/public/img/logo.gif', alt='Logo')
     .col-sm-8.col-md-8.col-xl-6
       // hide on screens smaller than xl 1200px
       img.banner.d-none.d-xl-block(src='/public/img/header_1200.png',alt='banner')

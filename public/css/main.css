@@ -7153,16 +7153,16 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   color: #343a40; }
 
-header h1 a,
-header h1 a:hover,
-header h1 a:focus {
+.logo-title,
+.logo-title:hover,
+.logo-title:focus {
   text-decoration: none;
   color: #343a40; }
 
-header .logo {
+.logo-img {
   width: 100px; }
 
-header .nav-link:hover {
+.nav-link:hover {
   color: #160A62 !important; }
 
 .modal-body {
