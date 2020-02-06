@@ -1,9 +1,9 @@
 .container
-  .row.mt-4 
-    .col-md-6
-      include ./title.pug
+  .row.mt-2
+    .col-sm-4.col-md-4.col-xl-6
       img.logo.ml-3(src='/public/img/logo.gif', alt='Logo')
-    .col-md-6
-      img.banner(src='/public/img/header_1200.png',alt='banner')
-      include ./navs.pug
-
+    .col-sm-8.col-md-8.col-xl-6
+      // hide on screens smaller than xl 1200px
+      img.banner.d-none.d-xl-block(src='/public/img/header_1200.png',alt='banner')
+      // hide on screens wider than xl 1200px
+      img.banner.d-xl-none(src='/public/img/header_992.png',alt='banner')

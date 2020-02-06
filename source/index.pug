@@ -2,9 +2,11 @@ html(lang='ja')
   head
     include ./includes/head.pug
   body
+    include ./includes/navs.pug
     header
       include ./includes/header.pug
-    include ./includes/indexContent.pug
+    content
+      include ./includes/indexContent.pug
     footer
       include ./includes/footer.pug
     include ./includes/script.pug
