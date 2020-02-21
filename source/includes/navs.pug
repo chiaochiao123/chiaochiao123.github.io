@@ -7,8 +7,15 @@ nav.px-xl-5.mx-xl-4.sticky-top.navbar.navbar-expand-lg.navbar-light.bg-white
         a.nav-link(href='/') HOME
       li.nav-item.px-2
         a.nav-link(href='/about.html') ABOUT ME
-      li.nav-item.px-2
-        a.nav-link(href='/project.html') PROJECT
+      li.nav-item.px-2.dropdown
+        a#navbarDropdown.nav-link.dropdown-toggle(href='/project.html', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') 
+          | PROJECT
+        .dropdown-menu(aria-labelledby='navbarDropdown')
+          .dropdown-header Children’s books
+          a.dropdown-item(href='#') Grandpa’s garden
+          .dropdown-header Collages
+          .dropdown-header Series
+          a.dropdown-item(href='#') Richard n Furry’s adventure
       li.nav-item.px-2
         a.nav-link(href='mailto:vdog8122@gmail.com', target='_blank') CONTACT
       li.nav-item.px-2
