@@ -7151,7 +7151,10 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 body {
-  color: #343a40; }
+  color: #343a40;
+  letter-spacing: 1.5px; }
+  body .paragraph-line-height {
+    line-height: 2.25; }
 
 .logo-title,
 .logo-title:hover,

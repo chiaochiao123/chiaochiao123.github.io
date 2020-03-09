@@ -5,6 +5,10 @@
 
 body{
   color: $dark;
+  letter-spacing: 1.5px;
+  .paragraph-line-height{
+    line-height: $line-height-lg * 1.5;
+  }
 }
 //component
 @import './components/logo';
