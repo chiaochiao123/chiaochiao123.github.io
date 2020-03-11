@@ -1,5 +1,5 @@
 mixin overlay(href,title,src)
-  .col-xs-6.col-sm-4.col-md-3.col-lg-3.fadin
+  .col-sm-4.col-md-3.col-lg-3.fadin.mt-3.mt-sm-0
     a(href=href, data-toggle='lightbox', data-gallery='gallery', data-max-width='900', data-max-height='700')
       img.img-fluid(src=src,alt="img")
       .overlay
@@ -20,3 +20,17 @@ mixin overlay(href,title,src)
     +overlay('/public/img/index_pc_origin/index_10_PC_Charlie_n_Furry_s_adventure_2.JPG',"Richard n Furry's adventure",'/public/img/index_pc_image/index_10_PC_Charlie_n_Furry_s_adventure_2.JPG')
     +overlay('/public/img/index_pc_origin/index_11_PC_Charlie_n_Furry_s_adventure_3.JPG',"Richard n Furry's adventure",'/public/img/index_pc_image/index_11_PC_Charlie_n_Furry_s_adventure_3.JPG')
     +overlay('/public/img/index_pc_origin/index_12_PC_Charlie_n_Furry_s_adventure_4.JPG',"Richard n Furry's adventure",'/public/img/index_pc_image/index_12_PC_Charlie_n_Furry_s_adventure_4.JPG')
+  nav.mt-5(aria-label='Page navigation example')
+    ul.pagination.justify-content-center
+      li.page-item
+        a.page-link(href='#', aria-label='Previous')
+          span(aria-hidden='true') «
+      li.page-item
+        a.page-link(href='#') 1
+      li.page-item
+        a.page-link(href='#') 2
+      li.page-item
+        a.page-link(href='#') 3
+      li.page-item
+        a.page-link(href='#', aria-label='Next')
+          span(aria-hidden='true') »

@@ -1,12 +1,18 @@
 .container
   .row
-    .col
+    .col-lg-12.col-xs-3
       h2 PROJECT
   .row
-    .col-lg-4
+    //mobile image
+    .col-4.d-block.d-sm-none
+      img.w-100.rounded-circle(src="/public/img/index_pc_origin/index_09_PC_Charlie_n_Furry_s_adventure_1.png", alt="alt")
+    .col-8.d-block.d-sm-none
+      h2.h3 RICHARD AND FURRY’S ADVENTURE
+    //pc image
+    .col-sm-4.d-none.d-sm-block
       img.w-100(src="/public/img/index_pc_origin/index_09_PC_Charlie_n_Furry_s_adventure_1.png", alt="alt")
-    .col-lg-8
-      h2 RICHARD AND FURRY’S ADVENTURE
+    .col-12.col-sm-8
+      h2.d-none.d-sm-block RICHARD AND FURRY’S ADVENTURE
       p 
         | Richard and Furry are ready to go to catch moonlight fish! As the best fisherman in the village, 
         br
@@ -19,6 +25,7 @@
         | It is a moonlight fairy in a jar! She needs our help!
         br
         | "We will take you to sun moon lake safely, no worry."Richard hold her softly and start his adventure!
+  // carousel
   .row.mt-3.d-flex.justify-content-center
     .col-md-6
       #richardNFurysAdventure.carousel.slide(data-ride='carousel')
