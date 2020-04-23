@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    block title
+      title Default title
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='stylesheet', href='css/style.css')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css', integrity='sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=', crossorigin='anonymous')
+    link(href='https://fonts.googleapis.com/css?family=Ramaraja&display=swap', rel='stylesheet')
+
+  body
+    include ../partials/navs.pug
+    block content
+    include ../partials/footer.pug
+
+    // jQuery first, then Popper.js, then Bootstrap JS
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+    // Optional JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js', integrity='sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map', integrity='undefined', crossorigin='anonymous')
+    script.
+      $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox({
+          showArrows: true,
+        });
+      });
