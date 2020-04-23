@@ -37,7 +37,7 @@ var gulp          = require('gulp'),
 gulp.task('browser-sync', function() {
   browserSync.init({
     server: {
-        baseDir: "./dist"
+        baseDir: "./docs"
     },
     notify: true,
     open: false
@@ -49,8 +49,8 @@ gulp.task('browser-sync', function() {
 gulp.task('styles', function () {
   var processors = [
     autoprefixer(),
-    postcssSvg({paths: ['dist/img'], silent: false}),
-    postcssAssets({loadPaths: ['dist/img'], basePath: 'dist/img', baseUrl: '/img/'}),
+    postcssSvg({paths: ['docs/img'], silent: false}),
+    postcssAssets({loadPaths: ['docs/img'], basePath: 'docs/img', baseUrl: '/img/'}),
     postcssFlex(),
   ];
   return gulp.src('src/assets/stylesheets/style.sass')
@@ -60,7 +60,7 @@ gulp.task('styles', function () {
   .pipe(postcss(processors).on('error', notify.onError()))
   .pipe(cssnano())
   .pipe(gulpif(!argv.production, sourcemaps.write()))
-  .pipe(gulp.dest('dist/css/'))
+  .pipe(gulp.dest('docs/css/'))
   .pipe(browserSync.stream());
 });
 
@@ -71,7 +71,7 @@ gulp.task('pug', function() {
   .pipe(pug({pretty: true}).on('error', notify.onError(function (error) {
     return 'Message to the notifier: ' + error.message;
   })))
-  .pipe(gulp.dest('dist'));
+  .pipe(gulp.dest('docs'));
 });
 
 gulp.task('js', function () {
@@ -85,7 +85,7 @@ gulp.task('js', function () {
       return 'Message to the notifier: ' + error.message;
     })))
     .pipe(gulpif(!argv.production, sourcemaps.write()))
-    .pipe(gulp.dest('dist/js/'));
+    .pipe(gulp.dest('docs/js/'));
 });
 
 //optimization img(jpg,png)
@@ -97,7 +97,7 @@ gulp.task('optimizationIMG', () => {
       svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()]
     }))
-    .pipe(gulp.dest('dist/img/'));
+    .pipe(gulp.dest('docs/img/'));
 });
 
 //optimization svg
@@ -105,7 +105,7 @@ gulp.task('optimizationIMG', () => {
 gulp.task('optimizationSVG', function () {
   return gulp.src(['src/assets/img/**/*.svg', '!src/assets/img/sprites/**/*.svg'], {base: 'src/assets/img'})
     .pipe(svgmin())
-    .pipe(gulp.dest('dist/img/'));
+    .pipe(gulp.dest('docs/img/'));
 });
 
 gulp.task('svgFragmentsSprite', function () {
@@ -120,7 +120,7 @@ gulp.task('svgFragmentsSprite', function () {
       }
     }))
     .pipe(svgmin({plugins: [{cleanupIDs: false}]}))
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('docs/img'));
 });
 
 gulp.task('svgSymbolSprite', function () {
@@ -128,7 +128,7 @@ gulp.task('svgSymbolSprite', function () {
     .pipe(svgSymbols({
       templates: ['default-svg']
     }))
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('docs/img'));
 });
 
 //Convert fonts(ttf to woff,woff2,eot):
@@ -162,20 +162,20 @@ gulp.task('convertFonts', function(done){
   done();
 });
 
-//Task moving fonts to dist folder
+//Task moving fonts to docs folder
 
 gulp.task('fonts', function(done){
   gulp.src(['src/assets/fonts/**/*'])
-    .pipe(gulp.dest('dist/fonts/'));
+    .pipe(gulp.dest('docs/fonts/'));
     done();
 });
 
 // Clean task
 
 gulp.task('clean', function() {
-  return gulp.src('dist', {read: false})
+  return gulp.src('docs', {read: false})
     .pipe(clean())
-    .pipe(notify('dist folder was removed'));
+    .pipe(notify('docs folder was removed'));
 });
 
 //Gulp watcher
@@ -183,9 +183,9 @@ gulp.task('clean', function() {
 gulp.task('watch', function () {
   gulp.watch('src/assets/stylesheets/**/*.sass', gulp.parallel('styles'));
   gulp.watch('src/views/**/*.pug', gulp.parallel('pug'));
-  gulp.watch('dist/**/*.html').on('change', browserSync.reload);
+  gulp.watch('docs/**/*.html').on('change', browserSync.reload);
   gulp.watch('src/assets/js/**/*.js', gulp.parallel('js'));
-  gulp.watch('dist/js/scripts.js').on('change', browserSync.reload);
+  gulp.watch('docs/js/scripts.js').on('change', browserSync.reload);
   gulp.watch(['src/assets/img/sprites/svg-fragments/**/*.svg'], gulp.parallel('svgFragmentsSprite'));
   gulp.watch(['src/assets/img/sprites/svg-symbols/**/*.svg'], gulp.parallel('svgSymbolSprite'));
 
@@ -195,7 +195,7 @@ gulp.task('watch', function () {
   function watcher(task) {
     task.on('unlink', function (filepath) {
       var filePathFromSrc = path.relative(path.resolve('src/assets/img'), filepath);
-      var destFilePath = path.resolve('dist/img', filePathFromSrc);
+      var destFilePath = path.resolve('docs/img', filePathFromSrc);
       del.sync(destFilePath);
     });
   }
