@@ -1,0 +1,74 @@
+// fonts
+$font-family-sans-serif: 'Ramaraja',-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+$font-family-base:       $font-family-sans-serif !default
+// line height
+$line-height-lg:  1.5 !default
+// colors
+// base colors
+$white: #ffffff !default
+$black:    #000 !default
+// custom colors
+$primary: #00004F
+$dark: #343a40
+
+// main styles
+body
+  color: $dark
+  letter-spacing: 1.5px
+  .paragraph-line-height
+    line-height: $line-height-lg * 1.33
+  font-family: $font-family-base
+  background-color: $white
+  color: $black
+
+//logo style
+.logo-title,
+.logo-title:hover,
+.logo-title:focus 
+  text-decoration: none
+  color: $dark
+.logo-img 
+  width: 100px
+
+//index custom styles
+.nav-link:hover
+  color: #160A62 !important
+
+.modal-body
+  padding: 0
+
+.modal-backdrop.show 
+  opacity: 0.8
+
+.overlay 
+  position: absolute
+  top: 0
+  bottom: 0
+  // left: 0
+  // right: 0
+  height: 100%
+  width: calc(100% - 30px)
+  opacity: 0
+  transition: .5s ease
+  background-color: #ffffff
+
+.fadin:hover .overlay 
+  opacity: .7
+
+
+.fadin .text 
+  color: 00000
+  font-size: 20px
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+  text-align: center
+
+
+//dropdown header
+.dropdown-header
+  font-size: 16px
+  color: $primary
