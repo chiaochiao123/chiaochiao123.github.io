@@ -3,7 +3,7 @@ body {
   letter-spacing: 1.5px;
   font-family: "Ramaraja", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   background-color: #ffffff;
-  color: #000;
+  color: #000000;
 }
 
 body .paragraph-line-height {
@@ -19,6 +19,10 @@ body .paragraph-line-height {
 
 .logo-img {
   width: 100px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .nav-link:hover {
@@ -50,7 +54,7 @@ body .paragraph-line-height {
 }
 
 .fadin .text {
-  color: 00000;
+  color: #000000;
   font-size: 20px;
   position: absolute;
   top: 50%;
