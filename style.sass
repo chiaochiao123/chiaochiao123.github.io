@@ -1,15 +1,20 @@
 // fonts
 $font-family-sans-serif: 'Ramaraja',-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 $font-family-base:       $font-family-sans-serif !default
+
 // line height
 $line-height-lg:  1.5 !default
-// colors
+
+// Colors
+
 // base colors
 $white: #ffffff !default
-$black:    #000 !default
+$black:    #000000 !default
+
 // custom colors
 $primary: #00004F
 $dark: #343a40
+$navbar-light-color:  rgba($black, .9)
 
 // main styles
 body
@@ -31,9 +36,13 @@ body
   width: 100px
 
 //index custom styles
+// navbar
+.navbar-light .navbar-nav .nav-link
+    color: $navbar-light-color
 .nav-link:hover
   color: #160A62 !important
 
+// modals
 .modal-body
   padding: 0
 
@@ -57,7 +66,7 @@ body
 
 
 .fadin .text 
-  color: 00000
+  color: $black
   font-size: 20px
   position: absolute
   top: 50%
