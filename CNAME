@@ -1,1 +1,4 @@
-chiaochiaoart.com
+cd chiaochiao123.github.io
+
+# ~/chiaochiao123.github.io
+echo "chiaochiaoart.com" > CNAME
