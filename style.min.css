@@ -21,8 +21,8 @@ body .paragraph-line-height {
   width: 100px;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.9);
+.nav-link {
+  color: rgba(0, 0, 0, 0.9) !important;
 }
 
 .nav-link:hover {
@@ -67,4 +67,13 @@ body .paragraph-line-height {
 .dropdown-header {
   font-size: 16px;
   color: #00004F;
+}
+
+.page-link {
+  border: 0;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #000000;
+  background-color: #ffffff;
 }

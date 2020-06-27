@@ -36,9 +36,9 @@ body
   width: 100px
 
 //index custom styles
-// navbar
-.navbar-light .navbar-nav .nav-link
-    color: $navbar-light-color
+// navs
+.nav-link
+    color: $navbar-light-color !important
 .nav-link:hover
   color: #160A62 !important
 
@@ -81,3 +81,12 @@ body
 .dropdown-header
   font-size: 16px
   color: $primary
+
+// pagination
+.page-link
+  border: 0
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link 
+    color: $black
+    background-color: #ffffff
+
